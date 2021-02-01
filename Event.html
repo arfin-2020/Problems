@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+</head>
+
+<body>
+    <!-- <h1 onclick="alert('Hello Programmer' )">Event Exploring</h1>
+    <h3 onclick=keyboardHandle()>Hello guys</h3>
+    <h2 onmouseover=keyboardHandle()>Event Exploring</h2>
+    <button onclick="alert(34)">Click me</button> -->
+    <h1>My name is Arfin Chowdhury Arif</h1>
+    <button onclick="First_button()">click me - 1</button>
+    <button id="secondbutton">click me - 2</button>
+    <button id="ThirdItem">click me - 3</button>
+    <button id="Fourth">Click me -4</button>
+</body>
+
+<script>
+    // function keyboardHandle() {
+    //     // console.log("Hello Programmers");
+    //     // alert("Hello Programmers");
+    //     console.log(new Date());}
+
+    // function handleclick() {
+    //     document.body.style.backgroundColor = "cyan";
+    // }
+
+    const second = document.getElementById("secondbutton");
+    second.onclick = function() {
+        console.log("Second person Clicked");
+    }
+    const Thirdbutton = document.getElementById("ThirdItem");
+    Thirdbutton.onclick = function() {
+        console.log("Third person Clicked.");
+    }
+
+    function First_button() {
+        console.log("First Person Clicked");
+    }
+    // document.getElementById("Fourth").onclick = handleclick;
+    // document.getElementById("Fourth").addEventListener("click", handleclick);
+    const fourth = document.getElementById("Fourth");
+    fourth.addEventListener("click", function() {
+        document.body.style.color = "tomato";
+    });
+</script>
+
+</html>

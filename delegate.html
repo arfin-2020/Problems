@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Delegate</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>My List</h1>
+        <ul id="mylist">
+            <li id="first" class="item">Lorem ipsum dolor sit.</li>
+            <li class="item">Itaque quisquam tempore laboriosam?</li>
+            <li class="item">Vel itaque ipsum obcaecati.</li>
+            <li class="item">Modi, deleniti! Labore, iste.</li>
+            <li class="item">Hic ratione in ea?</li>
+        </ul>
+        <button id="newbtn"> Click </button>
+    </div>
+
+    <script>
+        //Removing Item here just using loop and take only list
+        // const item = document.getElementsByClassName("item");
+        // for (let i = 0; i < item.length; i++) {
+        //     const element = item[i];
+        //     element.addEventListener("click", function(event) {
+        //         event.target.parentNode.removeChild(event.target);
+        //     });
+        // }
+
+        // Adding Item Here 
+        document.getElementById("newbtn").addEventListener("click", function(event) {
+            var parentItem = document.getElementById("mylist");
+            var newItem = document.createElement("li");
+            newItem.innerHTML = "I am Brand new elements";
+            parentItem.appendChild(newItem);
+        })
+
+        //removing item just using default parenNode
+        document.getElementById("mylist").addEventListener("click", function(event) {
+            event.target.parentNode.removeChild(event.target);
+        })
+    </script>
+</body>
+
+</html>
